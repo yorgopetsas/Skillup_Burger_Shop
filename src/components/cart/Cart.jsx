@@ -66,9 +66,9 @@ const Cart = () => {
           </div>{" "}
           <div>
             <h4>Total</h4>
-            <p>€{13,90 + 13,90 * 0.18 + 200}</p>
+            <p>€{13,90 + 13,90 * 0.21 + 2,30}</p>
           </div>
-          <Link to="/shipping">Checkout</Link>
+          <Link to="/shipping">Envío</Link>
         </article>
       </main>
     </section>

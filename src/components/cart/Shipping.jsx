@@ -6,41 +6,52 @@ const Shipping = () => {
   return (
     <section className="shipping">
       <main>
-        <h1>Shipping Details</h1>
+        <h1>Información de envío</h1>
         <form>
           <div>
-            <label>H.No.</label>
-            <input type="text" placeholder="Enter House No." />
+            <label>Calle y N.</label>
+            <input type="text" placeholder="Introducir el nombre de la calle y el número." />
           </div>
           <div>
-            <label>City</label>
-            <input type="text" placeholder="Enter City" />
+            <label>Ciudad</label>
+            <input type="text" placeholder="Introducir Ciudad" />
           </div>
           <div>
-              {/* Compelte the code for the COUNTRY DROPDOWN*/}
-            <label>Country</label>
+            <label>País</label>
 
             <select>
-              <option value="">Country</option>
-// Enter the code here for country dropdown           
-                  </option>
-                ))}
+              <option value="">España</option>
+              {/* {Country && Country.getAllCountries().map((i) => ( */}
+              {/* <option value="{i.isoCode}" key="{i.isoCode}"> */}
+                {/* {i.name}        */}
+                {/* </option> */}
+                {/* ))} */}
             </select>
           </div>
           <div>
               {/* Add the code for the STATE DROPDOWN*/}
-           
+            <label>Estado/Provincia</label>
+              <select>
+                <option value="">Estado/Provincia</option>
+                {State && State.getStatesOfCountry("ES").map((i) => (
+                <option value="{i.isoCode}" key="{i.isoCode}">
+                  {i.name}
+                </option>
+                ))}
+            </select>
           </div>
           <div>
-            <label>Pin Code</label>
-            <input type="number" placeholder="Enter Pincode" />
+            <label>Código Postal</label>
+            <input type="number" placeholder="Introducir código Postal" />
           </div>
-        // Enter thr code for contact           
-          
+          <div>
+            <label>N.º de teléfono</label>
+            <input type="number" placeholder="Ingresa tu número telefónico" />
+          </div>          
           <Popup trigger=
-                {<button type = "button">Confirm Order</button>}
+                {<button type = "button">Confirmar Pedido</button>}
                 position="right center">
-                <div style={{color:"red",position: 'absolute', top: '50%', right: '100%', transform: 'translateY(-50%)', backgroundColor: '#fff', padding: '10px', borderRadius: '5px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)'}}>Order Placed</div>
+                <div style={{color:"red",position: 'absolute', top: '50%', right: '100%', transform: 'translateY(-50%)', backgroundColor: '#fff', padding: '10px', borderRadius: '5px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)'}}>Confirmar Pedido</div>
                
             </Popup>
         </form>
