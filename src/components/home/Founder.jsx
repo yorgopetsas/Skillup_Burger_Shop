@@ -20,9 +20,7 @@ const Founder = () => {
         <h3>Nelson</h3>
 
         <p>
-          Hey, Everyone I am Nelson, the founder of Burger Shop.
-          <br />
-          Our aim is to create the most tasty burger on planet.
+          Soy Nelson, el fundador de la Hamburguesería y afiliado a Good Taste...
         </p>
       </motion.div>
     </section>

@@ -32,7 +32,7 @@ function Login() {
             onClick={() => handleJustifyClick("tab1")}
             active={justifyActive === "tab1"}
           >
-            Login
+            Iniciar Sessión
           </MDBTabsLink>
         </MDBTabsItem>
         <MDBTabsItem>
@@ -40,14 +40,14 @@ function Login() {
             onClick={() => handleJustifyClick("tab2")}
             active={justifyActive === "tab2"}
           >
-            Register
+            Regístrate
           </MDBTabsLink>
         </MDBTabsItem>
       </MDBTabs>
       <MDBTabsContent>
         <MDBTabsPane show={justifyActive === "tab1"}>
           <div className="text-center mb-3">
-            <p>Sign in with:</p>
+            <p>Iniciar Sesión con:</p>
             <div
               className="d-flex justify-content-between mx-auto"
               style={{ width: "40%" }}
@@ -85,7 +85,7 @@ function Login() {
                 <MDBIcon fab icon="github" size="sm" />
               </MDBBtn>
             </div>
-            <p className="text-center mt-3">or:</p>
+            <p className="text-center mt-3">o con:</p>
           </div>
           <MDBInput
             wrapperClass="mb-4"
@@ -108,9 +108,9 @@ function Login() {
             />
             <a href="!#">¿Olvidaste tu contraseña?</a>
           </div>
-          <MDBBtn className="mb-4 w-100">Sign in</MDBBtn>
+          <MDBBtn className="mb-4 w-100">Iniciar Sesión</MDBBtn>
           <p className="text-center">
-            Not a member? <a href="#!">Regístrate</a>
+		  	¿No estás registrado? <a href="#!">Regístrate</a>
           </p>
         </MDBTabsPane>
         <MDBTabsPane show={justifyActive === "tab2"}>
