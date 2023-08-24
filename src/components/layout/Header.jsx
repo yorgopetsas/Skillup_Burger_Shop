@@ -2,6 +2,7 @@ import React from 'react';
 import { IoFastFoodOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import { FiShoppingCart } from 'react-icons/fi';
+import { motion } from "framer-motion";
 import DropdownMenu from './DropdownMenu';
 
 const Header = ({ isAuthenticated = false }) => {

@@ -6,12 +6,11 @@ import Menu from "./Menu";
 const Home = () => {
 	const options = {
 		initial: {
-			x: "-
-			100%",
+			x: "-100%",
 			opacity: 0,
 		},
 		whileInView: {
-			{ x: 0,
+			x: 0,
 			opacity: 1,
 		},
 	};
@@ -22,9 +21,8 @@ const Home = () => {
 					<motion.h1 {...options}>Hamburguesería</motion.h1>
 					<motion.p
 						{...options}
-						transition={
-						{
-						delay: 0,2,
+						transition={{
+							delay: 0.2,
 						}}
 					>
 						Regálate una sabrosa hamburguesa.
@@ -42,7 +40,7 @@ const Home = () => {
 					}}
 					transition={
 						{ delay:
-						0,4,
+						0.4,
 					}}
 				>
 					Explorar el menú
