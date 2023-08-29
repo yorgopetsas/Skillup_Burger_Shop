@@ -1,6 +1,7 @@
 import React from "react";
 import { Country, State } from "country-state-city";
 import Popup from 'reactjs-popup';
+import { Link } from "react-router-dom";
 
 const Shipping = () => {
   return (
@@ -9,7 +10,7 @@ const Shipping = () => {
         <h1>Información de envío</h1>
         <form>
           <div>
-            <label>Calle y N.</label>
+            <label>Calle y Número</label>
             <input type="text" placeholder="Introducir el nombre de la calle y el número." />
           </div>
           <div>
@@ -21,15 +22,10 @@ const Shipping = () => {
 
             <select>
               <option value="">España</option>
-              {/* {Country && Country.getAllCountries().map((i) => ( */}
-              {/* <option value="{i.isoCode}" key="{i.isoCode}"> */}
-                {/* {i.name}        */}
-                {/* </option> */}
-                {/* ))} */}
+              {}
             </select>
           </div>
           <div>
-              {/* Add the code for the STATE DROPDOWN*/}
             <label>Estado/Provincia</label>
               <select>
                 <option value="">Estado/Provincia</option>
@@ -42,18 +38,33 @@ const Shipping = () => {
           </div>
           <div>
             <label>Código Postal</label>
-            <input type="number" placeholder="Introducir código Postal" />
+            <input type="number" placeholder="Introducir Código Postal" />
           </div>
           <div>
             <label>N.º de teléfono</label>
-            <input type="number" placeholder="Ingresa tu número telefónico" />
-          </div>          
-          <Popup trigger=
-                {<button type = "button">Confirmar Pedido</button>}
-                position="right center">
-                <div style={{color:"red",position: 'absolute', top: '50%', right: '100%', transform: 'translateY(-50%)', backgroundColor: '#fff', padding: '10px', borderRadius: '5px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)'}}>Confirmar Pedido</div>
-               
-            </Popup>
+            <input type="number" placeholder="Introducir tu número telefónico" />
+          </div>
+
+          <Popup
+            trigger={
+              <Link className="link" to="/myorders">
+                Confirmar Pedido
+              </Link>
+            }
+          >
+            <div
+              style={{
+                color:"red",
+                transform: 'translate(0%, -500%)',
+                backgroundColor: '#fff',
+                padding: '10px',
+                borderRadius: '5px',
+                boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+              }}
+            >
+              ¡Pedido realizado tu con éxito!
+            </div> 
+          </Popup>
         </form>
       </main>
     </section>

@@ -21,8 +21,20 @@ const MyOrders = () => {
           </thead>
 
           <tbody>
-//     Add the code for the table body
-           
+            {arr.map((i) => (
+              <tr key={i}>
+                <td>#ON????????</td>
+                <td>En curso</td>
+                <td>3</td>
+                <td>€{"16,00"}</td>
+                <td>Pago contra entrega</td>
+                <td>
+                  <Link to={`/order/${"ON00012345"}`}>
+                    <AiOutlineEye />
+                  </Link>
+                </td>
+              </tr>
+            ))}           
           </tbody>
         </table>
       </main>
